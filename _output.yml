@@ -1,0 +1,36 @@
+bookdown::bs4_book:
+  css: css/oistyle.css
+  theme:
+    primary: "#569BBD"
+  repo: https://github.com/openintrostat/ims
+  includes:
+    in_header: js/mathjax-popover.html
+
+bookdown::gitbook:
+  css: css/oistyle.css
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">IMS</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: ["pdf"]
+    edit:
+      link: https://github.com/openintrostat/ims/edit/master/%s
+      text: "Edit"
+    sharing: no
+
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: true
+  highlight: tango
+  dev: "cairo_pdf"
+  pandoc_args: ["--top-level-division=chapter", "--lua-filter=latex/sidebar.lua"]
+  template: null
+  quote_footer: ["\\hspace*{\\fill} ", ""]
+  toc_unnumbered: false
+  number_sections: true
