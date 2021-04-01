@@ -1,3 +1,7 @@
+# My Personal Testversion
+
+Download as release 2 from <https://github.com/OpenIntroStat/ims>
+
 # Introduction to Modern Statistics
 
 ## Where did Introduction to Statistics with Randomization and Simulation go?
